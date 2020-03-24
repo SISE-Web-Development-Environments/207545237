@@ -2,25 +2,29 @@
 {
 	position: fixed;
 	width: 100%;
-	height: 35px;
-	background-color: #c430e2;
+	height: 55px;
+	background-color: #e2c8cf;
 	overflow:hidden;
 
 }
 #menu li {
+	border-radius: 6px;
+	margin-left: 15px;
+	background: #dc2add;
 	float: left;
-	color: #f2f2f2;
 	text-align: center;
 	padding: 14px 16px;
-	font-size: 17px;
+	font-size: 22px;
+	list-style-type: none;
 }
 #menu a {
 	color: #f2e0b8;
 	text-align: center;
+	text-decoration:none;
 }
 #menu li:hover {
 	background-color: #dd9439;
-	color: #dd1116;
+	text-decoration-color: #dd1116;
 }
 
 /* Style inputs with type="text", select elements and textareas */
