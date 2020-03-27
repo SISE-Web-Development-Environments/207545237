@@ -124,6 +124,8 @@
     Q&A
   </span>
   <br>
+  <br>
+  <br>
  </h1>
  <p dir="rtl" align="right">
   <h1  class="titles" align="center" dir="rtl"><b>
@@ -177,19 +179,10 @@
   <input type="text" name="Subject"><br>
   <label for="messageArea">message</label>
   <textarea id="messageArea" name="message" placeholder="Write your request.." style="height:200px"></textarea>
-  <h1>
-   <strong>Copy your Emoji:</strong><span>😉</span><span>😍</span><span>😂</span><span>🥳</span><span>❤</span><span>😭</span>
-   <span>💞</span> <span>😁</span> <span>😇</span> <span>🤗</span> <span>🤑</span>
-  </h1>
-  Gender:
-  <input type="radio" name="smiley" value="😉">😉
-  <input type="radio" name="smiley" value="😇">😇
-  <input type="radio" name="smiley" value="🥳">🥳
-
   <P><STRONG>Select your Emoji:</STRONG>
    <SELECT id="selectedEmoji">
     <OPTION SELECTED>😀
-    <OPTION>😉
+    <OPTION >😉
     <OPTION>😍
     <OPTION>😂
     <OPTION>🥳
@@ -224,7 +217,7 @@ $(function(){
  });
  function addRadioValue() {
   var e = document.getElementById("selectedEmoji");
-  document.getElementById('messageArea').value += e.options[e.selectedIndex].value;
+  document.getElementById('messageArea').value += e.options[e.selectedIndex].text;
  }
 </script>
 </body>
