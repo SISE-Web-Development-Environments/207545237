@@ -223,7 +223,8 @@ $(function(){
     $('#menu').toggle($(this).scrollTop()>1000)
  });
  function addRadioValue() {
-    document.getElementById('messageArea').value += document.getElementById("selectedEmoji").options[e.selectedIndex].value;
+  var e = document.getElementById("selectedEmoji");
+  document.getElementById('messageArea').value += e.options[e.selectedIndex].value;
  }
 </script>
 </body>
