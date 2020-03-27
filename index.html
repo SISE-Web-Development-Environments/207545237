@@ -87,7 +87,7 @@
  <!-- Your like button code -->
 <p align="center">
  <div class="fb-like"
-      data-href="https://sise-web-development-environments.github.io/assignment1-207545237/"
+      data-href="https://sise-web-development-environments.github.io/207545237/"
       data-width="1000"
       data-layout="standard"
       data-action="like"
@@ -175,13 +175,18 @@
   <input type="text" name="mail"><br>
   Subject:<br>
   <input type="text" name="Subject"><br>
-  <label for="message">message</label>
-  <textarea id="message" name="message" placeholder="Write your request.." style="height:200px"></textarea>
+  <label for="messageArea">message</label>
+  <textarea id="messageArea" name="message" placeholder="Write your request.." style="height:200px"></textarea>
   <h1>
    <strong>Copy your Emoji:</strong><span>😉</span><span>😍</span><span>😂</span><span>🥳</span><span>❤</span><span>😭</span>
    <span>💞</span> <span>😁</span> <span>😇</span> <span>🤗</span> <span>🤑</span>
   </h1>
-  <input type="submit" value="Submit">
+  Gender:
+  <input type="radio" name="smiley" value="😉">😉
+  <input type="radio" name="smiley" value="😇">😇
+  <input type="radio" name="smiley" value="🥳">🥳
+
+  <button type="submit" name="Submit" onclick="addRadioValue()" >Submit</button>
   <input type="reset" value="Reset">
  </form>
 <br/>
@@ -200,7 +205,15 @@ $(function(){
 <script type="text/javascript">
  $(document).scroll(function() {
     $('#menu').toggle($(this).scrollTop()>1000)
- })
- </script>
+ });
+ function addRadioValue() {
+  var ele = document.getElementsByName('smiley');
+
+  for(i = 0; i < ele.length; i++) {
+   if(ele[i].checked)
+    document.getElementById('messageArea').value += ele[i].value;
+  }
+ }
+</script>
 </body>
 </html>
